@@ -1,6 +1,6 @@
 define(
-  ['lib/jquery'],
-  function(){
+  ['jquery'],
+  function($){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();
