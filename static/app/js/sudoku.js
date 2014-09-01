@@ -1,5 +1,5 @@
 define(
-  ['jquery', 'views/boardView'],
+  ['jquery', 'views/boardView', 'text!templates/layout'],
   function($, BoardView){
     function Sudoku() {
       this.name = 'Sudoku';
