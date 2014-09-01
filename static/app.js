@@ -2,6 +2,7 @@
 requirejs.config({
     baseUrl: 'app',
     paths: {
+        jquery: '../lib/jquery',
         lib: '../lib',
         scripts: 'js'
     }
