@@ -1,16 +1,15 @@
 define(
-  ['jquery', 'views/boardView', 'text!templates/layout'],
-  function($, BoardView){
+  ['jquery', 'views/boardView', 'templates/layout'],
+  function($, BoardView, layout){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();
     }
 
     Sudoku.prototype.init = function() {
-      $('body').append('<p>' + this.name + '</p>');
+      $('body').append(layout());
     }
 
-    window.BoardView = BoardView
     return new Sudoku();
   }
 );

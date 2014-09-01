@@ -1,2 +1,2 @@
 #!/bin/bash
-jade --client static/app/jade -o static/app/templates
+jade-amd --from static/app/jade --to static/app/templates
