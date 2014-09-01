@@ -1,6 +1,6 @@
 define(
-  ['jquery'],
-  function($){
+  ['jquery', 'views/boardView'],
+  function($, BoardView){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();
@@ -10,6 +10,7 @@ define(
       $('body').append('<p>' + this.name + '</p>');
     }
 
+    window.BoardView = BoardView
     return new Sudoku();
   }
 );

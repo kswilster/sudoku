@@ -4,7 +4,8 @@ requirejs.config({
     paths: {
         jquery: '../lib/jquery',
         lib: '../lib',
-        scripts: 'js'
+        scripts: 'js',
+        views: 'js/views'
     }
 });
 
