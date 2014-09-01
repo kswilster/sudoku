@@ -8,6 +8,12 @@ define(
 
     Sudoku.prototype.init = function() {
       $('body').append(layout());
+
+      boardOptions = {
+        el : $('.board')
+      }
+      this.board = new BoardView(boardOptions);
+      this.board.render();
     }
 
     return new Sudoku();
