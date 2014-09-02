@@ -7,7 +7,8 @@ requirejs.config({
         jadeRuntime: '../lib/runtime',
         lib: '../lib',
         scripts: 'js',
-        views: 'js/views'
+        views: 'js/views',
+        models: 'js/models'
     }
 });
 

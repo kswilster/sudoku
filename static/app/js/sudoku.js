@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'views/boardView', 'templates/layout'],
-  function($, BoardView, layout){
+  ['jquery', 'views/boardView', 'templates/layout', 'models/gridModel'],
+  function($, BoardView, layout, GridModel){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();
@@ -10,7 +10,8 @@ define(
       $('body').append(layout());
 
       boardOptions = {
-        el : $('.board')
+        el : $('.board'),
+        model: new GridModel()
       }
       this.board = new BoardView(boardOptions);
       this.board.render();
