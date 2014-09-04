@@ -93,6 +93,6 @@ buf.push("</tr>");
   }
 }).call(this);
 
-buf.push("</tbody></table><table><tbody><tr class=\"options\"><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr></tbody></table>");}.call(this,"cells" in locals_for_with?locals_for_with.cells:typeof cells!=="undefined"?cells:undefined));;return buf.join("");
+buf.push("</tbody></table><table><tbody><tr class=\"options\"><td id=\"1\"><a>1</a></td><td id=\"2\"><a>2</a></td><td id=\"3\"><a>3</a></td><td id=\"4\"><a>4</a></td><td id=\"5\"><a>5</a></td><td id=\"6\"><a>6</a></td><td id=\"7\"><a>7</a></td><td id=\"8\"><a>8</a></td><td id=\"9\"><a>9</a></td></tr></tbody></table>");}.call(this,"cells" in locals_for_with?locals_for_with.cells:typeof cells!=="undefined"?cells:undefined));;return buf.join("");
 };
 });

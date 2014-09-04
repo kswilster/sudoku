@@ -30,11 +30,17 @@ define(
       e.preventDefault();
       var self = e.data.self;
       var target = $(e.currentTarget);
+      var value = parseInt(target.text());
 
       self.$el.find('.cell.selected').removeClass('selected');
 
       if (target.hasClass('fixed'))
         return;
+
+      // update options value
+      var selected = self.$el.find('.options #'+value);
+      self.$el.find('.options .selected').removeClass('selected');
+      selected.addClass('selected');
 
       target.addClass('selected');
       // TODO: remove
