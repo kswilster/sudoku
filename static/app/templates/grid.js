@@ -93,6 +93,6 @@ buf.push("</tr>");
   }
 }).call(this);
 
-buf.push("</tbody></table>");}.call(this,"cells" in locals_for_with?locals_for_with.cells:typeof cells!=="undefined"?cells:undefined));;return buf.join("");
+buf.push("</tbody></table><table><tbody><tr class=\"options\"><td><a>1</a></td><td><a>2</a></td><td><a>3</a></td><td><a>4</a></td><td><a>5</a></td><td><a>6</a></td><td><a>7</a></td><td><a>8</a></td><td><a>9</a></td></tr></tbody></table>");}.call(this,"cells" in locals_for_with?locals_for_with.cells:typeof cells!=="undefined"?cells:undefined));;return buf.join("");
 };
 });

@@ -1,5 +1,6 @@
 .board table {
-  border-spacing: 0px; }
+  border-spacing: 0px;
+  margin-top: 30px; }
   .board table td {
     box-sizing: border-box;
     text-align: center;
@@ -20,6 +21,12 @@
       background-color: #efefef; }
     .board table td.selected {
       background-color: #D4F3D4; }
+  .board table .options td {
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-left: 2px black solid; }
+    .board table .options td:last-of-type {
+      border-right: 2px black solid; }
 .board button {
   margin: 0px; }
 
