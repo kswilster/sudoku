@@ -34,6 +34,9 @@ define(
       if (_.contains(bottom, y))
         classes = classes.concat(' bb');
 
+      if (this.attributes.fixed)
+        classes = classes.concat(' fixed');
+
       return classes;
     }
 
@@ -47,6 +50,11 @@ define(
       if (_.isUndefined(this.attributes.y))
         return -1;
       return this.attributes.y;
+    }
+
+    CellModel.prototype.set = function(attributes) {
+      this.attributes = _.extend(this.attributes, attributes);
+      this.attributes.classes = this.getClasses();
     }
 
     CellModel.prototype.uniqueID = (

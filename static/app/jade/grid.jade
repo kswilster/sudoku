@@ -5,5 +5,6 @@ table
         each cell in row
           td.cell(class=cell.attributes.classes, id=cell.attributes.id)
             a
-              | #{cell.attributes.value}
+              if cell.attributes.value
+                | #{cell.attributes.value}
 

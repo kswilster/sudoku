@@ -22,7 +22,12 @@ buf.push("<tr>");
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var cell = $$obj[$index];
 
-buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
+buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>");
+if ( cell.attributes.value)
+{
+buf.push("" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "");
+}
+buf.push("</a></td>");
     }
 
   } else {
@@ -30,7 +35,12 @@ buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(
     for (var $index in $$obj) {
       $$l++;      var cell = $$obj[$index];
 
-buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
+buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>");
+if ( cell.attributes.value)
+{
+buf.push("" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "");
+}
+buf.push("</a></td>");
     }
 
   }
@@ -53,7 +63,12 @@ buf.push("<tr>");
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var cell = $$obj[$index];
 
-buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
+buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>");
+if ( cell.attributes.value)
+{
+buf.push("" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "");
+}
+buf.push("</a></td>");
     }
 
   } else {
@@ -61,7 +76,12 @@ buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(
     for (var $index in $$obj) {
       $$l++;      var cell = $$obj[$index];
 
-buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
+buf.push("<td" + (jade.attr("id", cell.attributes.id, true, false)) + (jade.cls(['cell',cell.attributes.classes], [null,true])) + "><a>");
+if ( cell.attributes.value)
+{
+buf.push("" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "");
+}
+buf.push("</a></td>");
     }
 
   }
