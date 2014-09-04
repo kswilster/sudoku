@@ -22,7 +22,7 @@ buf.push("<tr>");
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var cell = $$obj[$index];
 
-buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</button></td>");
+buf.push("<td><a" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
     }
 
   } else {
@@ -30,7 +30,7 @@ buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " 
     for (var $index in $$obj) {
       $$l++;      var cell = $$obj[$index];
 
-buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</button></td>");
+buf.push("<td><a" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
     }
 
   }
@@ -53,7 +53,7 @@ buf.push("<tr>");
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var cell = $$obj[$index];
 
-buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</button></td>");
+buf.push("<td><a" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
     }
 
   } else {
@@ -61,7 +61,7 @@ buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " 
     for (var $index in $$obj) {
       $$l++;      var cell = $$obj[$index];
 
-buf.push("<td><button" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</button></td>");
+buf.push("<td><a" + (jade.attr("id", cell.attributes.id, true, false)) + " class=\"cell\">" + (jade.escape((jade_interp = cell.attributes.value) == null ? '' : jade_interp)) + "</a></td>");
     }
 
   }

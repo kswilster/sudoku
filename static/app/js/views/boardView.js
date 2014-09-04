@@ -26,6 +26,7 @@ define(
     }
 
     BoardView.prototype.clickCell = function(e) {
+      e.preventDefault();
       var self = e.data.self;
       var target = $(e.currentTarget);
 
@@ -35,6 +36,8 @@ define(
         return;
 
       target.addClass('selected');
+      // TODO: remove
+      console.log(target.attr('id'));
     }
 
     return BoardView;
