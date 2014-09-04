@@ -15,6 +15,7 @@ define(
 
       // bind events
       this.$el.on('click', '.cell', {self: this}, this.clickCell);
+      this.$el.on('click', '.options td', {self: this}, this.clickOption);
     }
 
     BoardView.prototype.render = function() {
@@ -30,7 +31,7 @@ define(
       var self = e.data.self;
       var target = $(e.currentTarget);
 
-      self.$el.find('.selected').removeClass('selected');
+      self.$el.find('.cell.selected').removeClass('selected');
 
       if (target.hasClass('fixed'))
         return;
@@ -38,6 +39,30 @@ define(
       target.addClass('selected');
       // TODO: remove
       console.log(target.attr('id'));
+    }
+
+    BoardView.prototype.clickOption = function(e) {
+      e.preventDefault();
+      var self = e.data.self;
+      var target = $(e.currentTarget);
+      var cellDOM = self.$el.find('.cell.selected');
+
+      if (cellDOM.length == 0)
+        return;
+
+      // update cell model
+      var id = parseInt(cellDOM.attr('id'));
+      var cell = self.model.getCell(id);
+      var value = parseInt(target.text());
+      cell.set({value:value});
+
+      // TODO: abstract behavior to cellView
+      // update cell value
+      cellDOM.find('a').html(value);
+
+      // update selected classes
+      self.$el.find('.options .selected').removeClass('selected');
+      target.addClass('selected');
     }
 
     return BoardView;

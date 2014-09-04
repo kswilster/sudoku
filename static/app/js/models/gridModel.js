@@ -40,6 +40,15 @@ define(
       return this.cells;
     }
 
+    GridModel.prototype.getCell = function(id) {
+      return _.chain(this.cells)
+        .flatten()
+        .filter(function(cell, id){
+          return (cell.attributes.id === id);
+        })
+        .value()[0];
+    }
+
     GridModel.prototype.loadGame = function(game) {
       // assuming game is 9x9
       for (var y=0; y<9; y++) {
