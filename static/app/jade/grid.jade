@@ -3,7 +3,7 @@ table
     each row in cells
       tr
         each cell in row
-          td
+          td.cell-wrapper(class=cell.attributes.classes)
             a.cell(id=cell.attributes.id)
               | #{cell.attributes.value}
 

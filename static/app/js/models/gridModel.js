@@ -6,16 +6,16 @@ define(
       this.height = 9;
 
       // build cells
-      this.cells = Array(this.widths);
+      this.cells = Array(this.height);
 
-      for (var x=0; x<this.width; x++) {
-        this.cells[x] = Array(this.height);
-        for (var y=0; y<this.height; y++) {
+      for (var y=0; y<this.height; y++) {
+        this.cells[y] = Array(this.width);
+        for (var x=0; x<this.height; x++) {
           cellAttrs = {
             x : x,
             y : y
           }
-          this.cells[x][y] = new CellModel(cellAttrs);
+          this.cells[y][x] = new CellModel(cellAttrs);
         }
       }
 
