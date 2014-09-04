@@ -11,13 +11,13 @@ define(
     }
 
     CellModel.prototype.getX = function() {
-      if _.undefined(this.attributes.x)
+      if (_.undefined(this.attributes.x))
         return -1;
       return this.attributes.x;
     }
 
     CellModel.prototype.getY = function() {
-      if _.undefined(this.attributes.y)
+      if (_.undefined(this.attributes.y))
         return -1;
       return this.attributes.y;
     }
