@@ -12,6 +12,9 @@ define(
       this.$el = $(options.el);
       this.model = options.model;
       this.template = grid;
+
+      // bind events
+      this.$el.on('click', '.cell', {self: this}, this.clickCell);
     }
 
     BoardView.prototype.render = function() {
@@ -20,6 +23,18 @@ define(
       }
       this.$el.html(this.template(context));
       return this;
+    }
+
+    BoardView.prototype.clickCell = function(e) {
+      var self = e.data.self;
+      var target = $(e.currentTarget);
+
+      self.$el.find('.selected').removeClass('selected');
+
+      if (target.hasClass('fixed'))
+        return;
+
+      target.addClass('selected');
     }
 
     return BoardView;

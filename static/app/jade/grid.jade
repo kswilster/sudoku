@@ -4,6 +4,6 @@ table
       tr
         each cell in row
           td
-            button(id=cell.attributes.id)
+            button.cell(id=cell.attributes.id)
               | #{cell.attributes.value}
 
