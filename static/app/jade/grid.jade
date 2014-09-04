@@ -1,0 +1,43 @@
+table
+  tbody
+    each row in cells
+      tr
+        each cell in row
+          td.cell(class=cell.attributes.classes, id=cell.attributes.id)
+            a
+              if cell.attributes.value
+                | #{cell.attributes.value}
+
+table
+  tbody
+    tr.options
+      td#1
+        a
+          |1
+      td#2
+        a
+          |2
+      td#3
+        a
+          |3
+      td#4
+        a
+          |4
+      td#5
+        a
+          |5
+      td#6
+        a
+          |6
+      td#7
+        a
+          |7
+      td#8
+        a
+          |8
+      td#9
+        a
+          |9
+
+
+

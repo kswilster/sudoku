@@ -1,0 +1,41 @@
+.board
+
+  table
+    border-spacing: 0px
+    margin-top: 30px
+
+    td
+      box-sizing: border-box
+      text-align: center
+      width: 30px
+      height: 30px
+      border-left: 1px #efefef solid
+      border-top: 1px #efefef solid
+      padding: 0px
+
+      &.bl
+        border-left: 2px black solid
+      &.bt
+        border-top: 2px black solid
+      &.br
+        border-right: 2px black solid
+      &.bb
+        border-bottom: 2px black solid
+
+      &.fixed
+        background-color: #efefef
+
+      &.selected
+        background-color: #D4F3D4
+
+    .options
+      td
+        border-top: 2px black solid
+        border-bottom: 2px black solid
+        border-left: 2px black solid
+
+        &:last-of-type
+          border-right: 2px black solid
+
+  button
+    margin: 0px

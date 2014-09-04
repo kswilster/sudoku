@@ -1,0 +1,33 @@
+.board table {
+  border-spacing: 0px;
+  margin-top: 30px; }
+  .board table td {
+    box-sizing: border-box;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-left: 1px #efefef solid;
+    border-top: 1px #efefef solid;
+    padding: 0px; }
+    .board table td.bl {
+      border-left: 2px black solid; }
+    .board table td.bt {
+      border-top: 2px black solid; }
+    .board table td.br {
+      border-right: 2px black solid; }
+    .board table td.bb {
+      border-bottom: 2px black solid; }
+    .board table td.fixed {
+      background-color: #efefef; }
+    .board table td.selected {
+      background-color: #D4F3D4; }
+  .board table .options td {
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-left: 2px black solid; }
+    .board table .options td:last-of-type {
+      border-right: 2px black solid; }
+.board button {
+  margin: 0px; }
+
+/*# sourceMappingURL=styles.css.map */

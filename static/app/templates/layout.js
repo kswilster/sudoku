@@ -1,0 +1,9 @@
+define(['jadeRuntime'], function(jade) {
+return function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<h2 class=\"title\">Sudoku!</h2><div class=\"menu\"></div><div class=\"board\"></div>");;return buf.join("");
+};
+});

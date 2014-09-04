@@ -1,15 +1,22 @@
 define(
-  ['jquery'],
-  function($){
+  ['jquery', 'views/boardView', 'templates/layout', 'models/gridModel'],
+  function($, BoardView, layout, GridModel){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();
     }
 
     Sudoku.prototype.init = function() {
-      $('body').append('<p>' + this.name + '</p>');
+      $('body').append(layout());
+
+      boardOptions = {
+        el : $('.board'),
+        model: new GridModel()
+      }
+      this.board = new BoardView(boardOptions);
+      this.board.render();
     }
 
-    return new Sudoku();
+    window.s = new Sudoku();
   }
 );
