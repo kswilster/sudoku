@@ -5,6 +5,7 @@ define(
       defaultAttributes = {
         fixed: false,
         value: 0,
+        id: this.uniqueID()
       }
 
       this.attributes = _.extend({}, defaultAttributes, attributes);
@@ -21,6 +22,14 @@ define(
         return -1;
       return this.attributes.y;
     }
+
+    CellModel.prototype.uniqueID = (
+      function() {
+        var id = 0;
+        return function() {
+          return id++;
+        };
+    })();
 
     return CellModel;
   }

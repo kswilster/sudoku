@@ -17,6 +17,6 @@ define(
       this.board.render();
     }
 
-    return new Sudoku();
+    window.s = new Sudoku();
   }
 );
