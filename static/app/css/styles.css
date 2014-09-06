@@ -1,33 +1,67 @@
-.board table {
-  border-spacing: 0px;
-  margin-top: 30px; }
-  .board table td {
-    box-sizing: border-box;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    border-left: 1px #efefef solid;
-    border-top: 1px #efefef solid;
-    padding: 0px; }
-    .board table td.bl {
+html {
+  background-image: url("../../assets/img/wood_1/wood_1.png"); }
+
+.title {
+  color: wheat; }
+
+.app-wrapper {
+  margin: auto;
+  max-width: 800px;
+  text-align: center; }
+
+.board {
+  padding: 20px;
+  background-color: #748679;
+  border-radius: 75px;
+  width: 600px;
+  margin: auto; }
+  .board table {
+    border-spacing: 0px;
+    margin: auto; }
+    .board table.options-bar {
+      margin-top: 20px; }
+    .board table td {
+      box-sizing: border-box;
+      text-align: center;
+      width: 60px;
+      height: 60px;
+      background-color: #887780;
+      border-left: 1px #5F5353 solid;
+      border-top: 1px #5F5353 solid;
+      padding: 0px; }
+      .board table td.bl {
+        border-left: 2px #1F1F1F solid; }
+      .board table td.bt {
+        border-top: 2px #1F1F1F solid; }
+      .board table td.br {
+        border-right: 2px #1F1F1F solid; }
+      .board table td.bb {
+        border-bottom: 2px #1F1F1F solid; }
+      .board table td.tlc {
+        border-top-left-radius: 5px; }
+      .board table td.trc {
+        border-top-right-radius: 5px; }
+      .board table td.blc {
+        border-bottom-left-radius: 5px; }
+      .board table td.brc {
+        border-bottom-right-radius: 5px; }
+      .board table td.fixed {
+        background-color: #5F5353; }
+      .board table td.selected {
+        background-color: #748679;
+        color: white; }
+    .board table .options td {
+      border-top: 2px black solid;
+      border-bottom: 2px black solid;
       border-left: 2px black solid; }
-    .board table td.bt {
-      border-top: 2px black solid; }
-    .board table td.br {
-      border-right: 2px black solid; }
-    .board table td.bb {
-      border-bottom: 2px black solid; }
-    .board table td.fixed {
-      background-color: #efefef; }
-    .board table td.selected {
-      background-color: #D4F3D4; }
-  .board table .options td {
-    border-top: 2px black solid;
-    border-bottom: 2px black solid;
-    border-left: 2px black solid; }
-    .board table .options td:last-of-type {
-      border-right: 2px black solid; }
-.board button {
-  margin: 0px; }
+      .board table .options td:first-of-type {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      .board table .options td:last-of-type {
+        border-right: 2px black solid;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+  .board button {
+    margin: 0px; }
 
 /*# sourceMappingURL=styles.css.map */

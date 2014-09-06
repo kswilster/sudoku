@@ -34,6 +34,16 @@ define(
       if (_.contains(bottom, y))
         classes = classes.concat(' bb');
 
+      //border radii
+      if ((x == 0) && (y == 0))
+        classes = classes.concat(' tlc');
+      if ((x == 8) && (y == 0))
+        classes = classes.concat(' trc');
+      if ((x == 0) && (y == 8))
+        classes = classes.concat(' blc');
+      if ((x == 8) && (y == 8))
+        classes = classes.concat(' brc');
+
       if (this.attributes.fixed)
         classes = classes.concat(' fixed');
 
