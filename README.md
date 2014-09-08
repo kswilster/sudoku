@@ -3,12 +3,12 @@ sudoku
 
 ## Requirements
 - UI
-  - New Game
   - Check Solution
-  - Clear
   - Board Game
     - 9x9 grid of numbers
     - many empty spaces, should be able to change value in these spaces
+    - fixed spaces that cannot be changed
+    - ability to use keyboard (1-9) to modify value of selected key
 - 
 
 ## Nice to have
@@ -27,25 +27,27 @@ sudoku
    - utility functions
  - Require.js
    - Dependency management
- - CoffeeScript
-   - Code readability
  - Jade
    - Templating
- - Grunt
-   - Automation
-   - Simplify compiling coffeescript and jade
+ - make
+   - run ./make to compile jade
 ### Classes
  - Views (views are used like Backbone views, handle user interaction and rendering)
-   - Board
-   - Menu
+   - BoardView
+     - responsible for rendering the board and handling all user interaction
  - Models
-   - Cell
-     - final: boolean (can not be changed by user)
-     - getValidVals()
-     - setValue(v), getValue()
-   - Grid
-     - getCell(x, y), getCell(id)
-     - getCol(x)
-     - getRow(y)
-     - getRegion(x, y), getRegion(id), getRegion(cell)
-     - isSolved()
+   - CellModel
+     - stores cell state 
+   - GridModel
+     - stores and manages all cells
+   - GridCheckerModel
+     - responsible for checking if the sudoku board has been solved
+### Future improvements
+ - Tests
+   - Each model could use unit tests
+   - The whole game would benefit from a white-box integration test
+ - Refactoring
+   - the BoardView is responsible for too much, it's functionality should be broken down into...
+     - GridView: handles rendering the cells
+       - CellView: handles input to a single cell
+     - MenuView: handles options (bottom row) inputs and "Check Game" functionality
