@@ -42,7 +42,8 @@ sudoku
      - stores and manages all cells
    - GridCheckerModel
      - responsible for checking if the sudoku board has been solved
-### Future improvements
+
+## Future improvements
  - Tests
    - Each model could use unit tests
    - The whole game would benefit from a white-box integration test
