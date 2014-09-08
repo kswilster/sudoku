@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore'],
-  function($, _){
+  ['underscore'],
+  function(_){
     function CellModel(attributes) {
       defaultAttributes = {
         fixed: false,
@@ -60,6 +60,12 @@ define(
       if (_.isUndefined(this.attributes.y))
         return -1;
       return this.attributes.y;
+    }
+
+    CellModel.prototype.getValue = function() {
+      if (_.isUndefined(this.attributes.value))
+        return 0;
+      return this.attributes.value;
     }
 
     CellModel.prototype.set = function(attributes) {
