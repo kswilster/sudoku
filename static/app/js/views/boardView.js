@@ -16,6 +16,8 @@ define(
       // bind events
       this.$el.on('click', '.cell', {self: this}, this.clickCell);
       this.$el.on('click', '.options td', {self: this}, this.clickOption);
+      this.$el.on('click', '.check-game', {self: this}, this.checkGame);
+      $(document).on('keypress', null, {self: this}, this.handleKey);
     }
 
     BoardView.prototype.render = function() {
@@ -43,8 +45,6 @@ define(
       selected.addClass('selected');
 
       target.addClass('selected');
-      // TODO: remove
-      console.log(target.attr('id'));
     }
 
     BoardView.prototype.clickOption = function(e) {
@@ -69,6 +69,28 @@ define(
       // update selected classes
       self.$el.find('.options .selected').removeClass('selected');
       target.addClass('selected');
+    }
+
+    BoardView.prototype.checkGame = function(e) {
+      e.preventDefault();
+      var self = e.data.self;
+      var target = $(e.currentTarget);
+
+      if (!self.model.checkGame()) {
+        console.log("Keep trying!");
+        return;
+      }
+
+      console.log('Won the game!');
+    }
+
+    BoardView.prototype.handleKey = function(e) {
+      var val = parseInt(String.fromCharCode(e.charCode));
+      var self = e.data.self;
+
+      if ((val > 0) && (val < 10)) {
+        self.$el.find('.options #'+val).click();
+      }
     }
 
     return BoardView;

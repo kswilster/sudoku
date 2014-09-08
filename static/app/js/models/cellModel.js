@@ -62,6 +62,12 @@ define(
       return this.attributes.y;
     }
 
+    CellModel.prototype.getValue = function() {
+      if (_.isUndefined(this.attributes.value))
+        return 0;
+      return this.attributes.value;
+    }
+
     CellModel.prototype.set = function(attributes) {
       this.attributes = _.extend(this.attributes, attributes);
       this.attributes.classes = this.getClasses();

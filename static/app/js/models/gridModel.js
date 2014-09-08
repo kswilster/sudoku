@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore', 'models/cellModel'],
-  function($, _, CellModel){
+  ['jquery', 'underscore', 'models/cellModel', 'models/gridCheckerModel'],
+  function($, _, CellModel, GridCheckerModel){
     function GridModel() {
       this.width = 9;
       this.height = 9;
@@ -19,17 +19,20 @@ define(
         }
       }
 
+      // load game checker
+      this.gridChecker = new GridCheckerModel();
+
       //TODO: load games from other files
       var game = [
-        [3,0,0,0,0,5,0,6,7],
-        [0,7,4,0,0,3,0,0,5],
-        [6,0,0,4,8,0,0,2,0],
-        [0,0,2,5,0,0,0,3,1],
-        [0,0,0,0,0,6,5,0,2],
-        [4,3,0,2,7,0,0,0,0],
-        [0,9,0,0,1,0,0,5,3],
-        [1,0,0,0,0,0,6,9,0],
-        [0,2,8,6,0,9,0,0,0]
+        [0,0,0,0,0,0,5,9,2],
+        [8,0,0,0,0,0,0,0,0],
+        [3,0,0,9,0,0,0,7,0],
+        [2,0,0,0,9,0,0,1,3],
+        [0,8,9,6,0,0,0,0,0],
+        [0,0,0,0,0,0,0,5,0],
+        [0,0,4,7,0,9,0,8,0],
+        [0,3,0,0,5,0,2,0,4],
+        [0,0,0,0,0,0,0,0,0]
       ]
 
       this.loadGame(game);
@@ -41,12 +44,7 @@ define(
     }
 
     GridModel.prototype.getCell = function(id) {
-      return _.chain(this.cells)
-        .flatten()
-        .filter(function(cell, id){
-          return (cell.attributes.id === id);
-        })
-        .value()[0];
+      return _.flatten(this.cells)[id];
     }
 
     GridModel.prototype.loadGame = function(game) {
@@ -62,6 +60,10 @@ define(
           this.cells[y][x].set(cellAttrs);
         }
       }
+    }
+
+    GridModel.prototype.checkGame = function() {
+      return this.gridChecker.isValid(this.cells);
     }
 
     return GridModel;

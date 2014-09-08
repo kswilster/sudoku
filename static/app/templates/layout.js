@@ -4,6 +4,6 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<section class=\"app-wrapper\"><h2 class=\"title\">Sudoku!</h2><div class=\"menu\"></div><div class=\"board\"></div></section>");;return buf.join("");
+buf.push("<section class=\"app-wrapper\"><h2 class=\"title\">Sudoku!</h2><div class=\"board\"></div></section>");;return buf.join("");
 };
 });
