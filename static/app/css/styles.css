@@ -50,6 +50,8 @@ html {
       .board table td.selected {
         background-color: #748679;
         color: white; }
+      .board table td a {
+        font-size: 40px; }
     .board table .options td {
       border-top: 2px black solid;
       border-bottom: 2px black solid;
