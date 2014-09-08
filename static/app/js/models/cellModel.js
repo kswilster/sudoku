@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore'],
-  function($, _){
+  ['underscore'],
+  function(_){
     function CellModel(attributes) {
       defaultAttributes = {
         fixed: false,

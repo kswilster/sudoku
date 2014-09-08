@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore', 'models/cellModel', 'models/gridCheckerModel'],
-  function($, _, CellModel, GridCheckerModel){
+  ['underscore', 'models/cellModel', 'models/gridCheckerModel'],
+  function(_, CellModel, GridCheckerModel){
     function GridModel() {
       this.width = 9;
       this.height = 9;

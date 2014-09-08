@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'views/boardView', 'templates/layout', 'models/gridModel'],
-  function($, BoardView, layout, GridModel){
+  ['views/boardView', 'templates/layout', 'models/gridModel'],
+  function(BoardView, layout, GridModel){
     function Sudoku() {
       this.name = 'Sudoku';
       this.init();

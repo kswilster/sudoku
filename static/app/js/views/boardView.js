@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore', 'templates/grid'],
-  function($, _, grid){
+  ['underscore', 'templates/grid', 'lib/reveal/jquery.reveal.js'],
+  function(_, grid, reveal){
     function BoardView(options) {
       validOptions = ['el', 'model']
       defaultOptions = {
@@ -77,11 +77,12 @@ define(
       var target = $(e.currentTarget);
 
       if (!self.model.checkGame()) {
-        console.log("Keep trying!");
-        return;
+        $("#myModal h1").text("Wrong Solution, Keep Trying!");
+      } else {
+        $("#myModal h1").text("Congratulations, You've won!");
       }
 
-      console.log('Won the game!');
+      $('#myModal').reveal();
     }
 
     BoardView.prototype.handleKey = function(e) {

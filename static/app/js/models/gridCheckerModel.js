@@ -1,6 +1,6 @@
 define(
-  ['jquery', 'underscore'],
-  function($, _){
+  ['underscore'],
+  function(_){
     function GridCheckerModel() {
       //map positions to rows, columns, and regions
       this.rows = [
